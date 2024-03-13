@@ -1,5 +1,6 @@
 import numpy as np
 import scipy.constants as const
+import geo_w as geo
 
 
 class P_cygni_ellipsoid(object):
