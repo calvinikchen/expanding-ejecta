@@ -12,20 +12,21 @@ functions for specialized calculations.
 Author: I-Kai Chen
 Date: September 30, 2024
 """
-
+import sys
+sys.path.append('model/')
 
 import os
 os.environ['OPENBLAS_NUM_THREADS'] = '1'
 
 import numpy as np
 import scipy.constants as const
-import P_cygni_ellipsoid_jax as pe
+from P_cygni_ellipsoid_jax import P_cygni_ellipsoid
 from black_body_jax import b_nu
 import jax
 import jax.numpy as jnp
 
 
-class Correlator_ellipsoid(pe.P_cygni_ellipsoid):
+class Correlator_ellipsoid(P_cygni_ellipsoid):
     """
     A class for calculating intensity correlators around a P Cygni profile of an
     ellipsoidal supernova.

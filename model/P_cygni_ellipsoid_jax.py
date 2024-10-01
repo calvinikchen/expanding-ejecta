@@ -11,8 +11,8 @@ calculating velocities, geometric dilution factors, and optical depths.
 Author: I-Kai Chen
 Date: September 30, 2024
 """
-
-
+import os
+import sys
 import equinox as eqx
 import jax
 import jax.numpy as jnp
@@ -20,15 +20,16 @@ import numpy as np
 import scipy.constants as const
 import pandas as pd
 
-
+"""
 # Load data from CSV file
-table = pd.read_csv('table/w_table.csv')
+table = pd.read_csv('model/table/w_table.csv')
 data = jnp.array(table['0'].to_numpy().reshape((100, 100, 90)))
 
 # Define parameter ranges
 eta = jnp.linspace(-1, 1, 100)
 r = jnp.linspace(-1, 1, 100)
 theta = jnp.linspace(0, np.pi/2, 90)
+"""
 
 
 class P_cygni_ellipsoid(eqx.Module):
@@ -79,6 +80,10 @@ class P_cygni_ellipsoid(eqx.Module):
     vel: jax.Array
     geo_w: jax.Array
     tau: jax.Array
+
+    # Load data from CSV file
+    table = pd.read_csv('model/table/w_table.csv')
+    data = jnp.array(table['0'].to_numpy().reshape((100, 100, 90)))
 
 
     def __init__(self, nu_obs, th_obs, ang_obs=jnp.arange(0, np.pi, np.pi/10),
@@ -172,7 +177,8 @@ class P_cygni_ellipsoid(eqx.Module):
         eta = jnp.zeros(len(r)) + jnp.log10(self.eta) * 99/2 + 99/2
 
         # Interpolate geometric dilution factor
-        w = jax.scipy.ndimage.map_coordinates(data, jnp.array([eta, r, ang]), order=1)
+        w = jax.scipy.ndimage.map_coordinates(P_cygni_ellipsoid.data,
+                                              jnp.array([eta, r, ang]), order=1)
         w = w.reshape(shape)
 
         return jnp.nan_to_num(w, nan=0)
