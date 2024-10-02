@@ -1,20 +1,22 @@
 # expanding-ejecta
 [comment]:[![arXiv](https://img.shields.io/badge/arXiv-2301.00822%20-green.svg)](https://arxiv.org/abs/24XX.XXXXX)
 
-This GitHub page is the home of expanding-ejecta; the code for generating P Cygni line profile in a ellipsoidal supernova, calculating the intensity correlator of the image as seen by an intensity interferometer described in [24XX.XXXXX](https://arxiv.org/abs/24XX.XXXXX) capable of measuring supernova morphology and Hubble constant. This code is JAX compatible with just-in-time speed up and autograd for potential faster Markov-Chain Monte-Carlo (MCMC) methods.
+This GitHub page is the home of expanding-ejecta; the code for generating P Cygni line profile in an ellipsoidal supernova, calculating the intensity correlator of the image as seen by an intensity interferometer described in [24XX.XXXXX](https://arxiv.org/abs/24XX.XXXXX) capable of measuring supernova morphology and Hubble constant. This code is JAX compatible with just-in-time speed up and autograd for potential faster Markov-Chain Monte-Carlo (MCMC) methods.
 
-See the Jupyter Notebook `demo.ipynb` for a quick demonstration on how to create an image of a supernova and its intensity correlator as well as the JAX compatibility of the code
+See the Jupyter Notebook `demo.ipynb` for a quick demonstration on how to create an image of a supernova and its intensity correlator as well as the JAX compatibility of the code.
 
 ![RingFlux](/plots/ellipsoid.png "An example of astrometric lensing. A gravitional lens (purple) approaches a source freely propagating across the sky (red). If the lens is in the foreground relative to the faraway observer, the lens will deflect the apparent path of the star (black).")
 
-If this pipeline is used in published work, please cite [24XX.XXXXX](https://arxiv.org/abs/24XX.XXXXX).
+If this code is used in published work, please cite [24XX.XXXXX](https://arxiv.org/abs/24XX.XXXXX).
 
 ## Authors
 
-- I-Kai Chen
+- I-Kai Chen [ic2127@nyu.edu](mailto:ic2127@nyu.edu)
 - David Dunsky
 - Junwu Huang
 - Ken Van Tilburg
+
+Please contact the [authors](mailto:ic2127@nyu.edu) if there's any question or issue with the code.
 
 ## model
 
