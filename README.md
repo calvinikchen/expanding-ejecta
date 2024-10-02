@@ -28,4 +28,4 @@ The `model` folder contains the code for generating the image of P Cygni profile
 
 ## plots
 
-The `PaperPlots` folder contains the Jupyter Notebook scripts used to generate the plots shown in [2301.00822](https://arxiv.org/abs/2301.00822).
+The `plots` folder contains the Jupyter Notebook scripts used to generate the plots shown in [24XX.XXXXX](https://arxiv.org/abs/24XX.XXXXX).
