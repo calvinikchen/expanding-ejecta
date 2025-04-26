@@ -5,7 +5,8 @@ This GitHub page is the home of expanding-ejecta; the code for generating P Cygn
 
 See the Jupyter Notebook `demo.ipynb` for a quick demonstration on how to create an image of a supernova and its intensity correlator as well as the JAX compatibility of the code
 
-![RingFlux](/plots/ellipsoid.png "An example of astrometric lensing. A gravitional lens (purple) approaches a source freely propagating across the sky (red). If the lens is in the foreground relative to the faraway observer, the lens will deflect the apparent path of the star (black).")
+![RingFlux](/plots/ellipsoid.png)
+![alternative text](/plots/EEM_animation.gif)
 
 If this pipeline is used in published work, please cite [24XX.XXXXX](https://arxiv.org/abs/24XX.XXXXX).
 
