@@ -19,6 +19,8 @@ import jax.numpy as jnp
 import numpy as np
 import scipy.constants as const
 import pandas as pd
+sys.path.append('model/')
+sys.path.append('./')
 
 """
 # Load data from CSV file
@@ -82,7 +84,7 @@ class P_cygni_ellipsoid(eqx.Module):
     tau: jax.Array
 
     # Load data from CSV file
-    table = pd.read_csv('model/table/w_table.csv')
+    table = pd.read_csv('/Users/calvinchen/Documents/expanding-ejecta/model/table/w_table.csv')
     data = jnp.array(table['0'].to_numpy().reshape((100, 100, 90)))
 
 

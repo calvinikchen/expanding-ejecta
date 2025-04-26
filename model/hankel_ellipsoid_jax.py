@@ -14,6 +14,7 @@ Date: September 30, 2024
 """
 import sys
 sys.path.append('model/')
+sys.path.append('./')
 
 import os
 os.environ['OPENBLAS_NUM_THREADS'] = '1'
@@ -84,7 +85,7 @@ class Correlator_ellipsoid(P_cygni_ellipsoid):
     def __init__(self, nu_obs, r_ar, ang_obs=jnp.linspace(0, np.pi, 11),
                  v0=8e6, nu0=1, ds=const.parsec*1e6, t=10*const.day, eta=1.2,
                  theta=0, tau0=2, n=5, area=25*jnp.pi, eff=0.5, spectra_r=1e4,
-                 sigma_t=1e-11):
+                 sigma_t=1e-11, em = 1):
         """
         Initialize the Correlator_ellipsoid object.
 
@@ -132,7 +133,7 @@ class Correlator_ellipsoid(P_cygni_ellipsoid):
         self.emission()
 
         r = r_ar/self.th_max
-        self.ss = self.pcyg_abs + self.pcyg_em
+        self.ss = self.pcyg_abs + self.pcyg_em*em
         norm = jnp.sum((r<1)*r**2)*(self.n_ang-1)
         self.spec = jnp.sum(self.ss[:,:-1,:]*jnp.expand_dims(r**2, axis=(1,2)),
                             axis=(0,1))/norm
