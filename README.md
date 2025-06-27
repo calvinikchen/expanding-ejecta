@@ -16,7 +16,7 @@ If this pipeline is used in published work, please cite [2504.20132](https://arx
 - David Dunsky
 - Junwu Huang
 - Ken Van Tilburg
-- Robert Wagoner
+- Robert V. Wagoner
 
 ## model
 
