@@ -5,7 +5,7 @@ This GitHub page is the home of expanding-ejecta; the code for generating P Cygn
 
 See the Jupyter Notebook `demo.ipynb` for a quick demonstration on how to create an image of a supernova and its intensity correlator as well as the JAX compatibility of the code
 
-![RingFlux](/plots/ellipsoid.pdf)
+![RingFlux](/plots/ellipsoid.png)
 ![alternative text](/plots/EEM_animation.gif)
 
 If this pipeline is used in published work, please cite [2504.20132](https://arxiv.org/abs/2504.20132) and [2505.08856](https://arxiv.org/abs/2505.08856).
